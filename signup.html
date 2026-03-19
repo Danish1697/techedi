@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">    
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <video src="logo.mp4" autoplay loop width="70px" height="50px" muted></video>
+            <div class="text">TechEdify</div>
+        </div>
+        <div class="nav">
+        <a href="index.html" class="text_1" id="home">Home</a>
+        <a href="index.html" class="text_1">Courses</a>
+        <a href="index.html" class="text_1">Blog</a>
+        <a href="index.html" class="text_1">About Us</a>
+        <a href="index.html" class="text_1" id="contact">Contact Us</a>
+    </div>
+        
+    </nav>
+     
+
+    <div class="container">
+        <div class="pic"></div>
+    </div>
+
+
+<script>
+
+
+  
+// =========================
+// CREATE SIGNUP FORM
+// =========================
+const container = document.querySelector(".container");
+
+const formBox = document.createElement("div");
+
+formBox.innerHTML = `
+<div style="
+width:350px;
+padding:30px;
+border-radius:15px;
+background: rgba(0,0,0,0.6);
+backdrop-filter: blur(10px);
+color:white;
+display:flex;
+flex-direction:column;
+gap:15px;
+box-shadow:0 0 30px rgba(0,168,255,0.2);
+">
+
+<h2 style="text-align:center;">Sign Up</h2>
+
+<input type="text" placeholder="Full Name" class="input">
+<input type="email" placeholder="Email" class="input">
+
+<input type="text" placeholder="Mobile Number" class="input mobile">
+
+<div style="display:flex; gap:10px;">
+    <input type="text" placeholder="Enter OTP" class="input otp">
+    <button class="otpBtn">Send OTP</button>
+</div>
+
+<p class="showOtp" style="font-size:12px; color:#18FF5B;"></p>
+
+<div style="position:relative;">
+    <input type="password" placeholder="Password" class="input password">
+    <span class="toggle" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
+</div>
+
+<div style="position:relative;">
+    <input type="password" placeholder="Confirm Password" class="input confirm">
+    <span class="toggle2" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer;">👁️</span>
+</div>
+
+<button class="signupBtn">Create Account</button>
+
+<p style="font-size:12px;text-align:center;">
+<a href="login.html" style="color:#18FF5B; text-decoration:none;">
+Already have an account?
+</a>
+</p>
+
+</div>
+`;
+
+container.appendChild(formBox);
+
+// =========================
+// CENTER LAYOUT
+// =========================
+container.style.display = "flex";
+container.style.justifyContent = "center";
+container.style.alignItems = "center";
+container.style.height = "calc(100vh - 60px)";
+
+
+// =========================
+// INPUT STYLE
+// =========================
+document.querySelectorAll(".input").forEach(input => {
+    input.style.padding = "10px";
+    input.style.border = "none";
+    input.style.borderRadius = "6px";
+    input.style.outline = "none";
+    input.style.background = "#020617";
+    input.style.color = "white";
+    input.style.width = "100%";
+
+    // focus glow
+    input.addEventListener("focus", () => {
+        input.style.boxShadow = "0 0 10px rgba(0,168,255,0.5)";
+    });
+    input.addEventListener("blur", () => {
+        input.style.boxShadow = "none";
+    });
+});
+
+
+// =========================
+// BUTTON STYLE + HOVER
+// =========================
+document.querySelectorAll("button").forEach(btn => {
+    btn.style.padding = "10px";
+    btn.style.border = "none";
+    btn.style.borderRadius = "6px";
+    btn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+    btn.style.color = "white";
+    btn.style.cursor = "pointer";
+    btn.style.transition = "0.3s";
+    btn.style.whiteSpace = "nowrap";
+
+    btn.addEventListener("mouseenter", () => {
+        btn.style.transform = "translateY(-2px) scale(1.03)";
+        btn.style.boxShadow = "0 10px 25px rgba(0,168,255,0.4)";
+    });
+
+    btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "translateY(0) scale(1)";
+        btn.style.boxShadow = "none";
+    });
+
+    btn.addEventListener("mousedown", () => {
+        btn.style.transform = "scale(0.95)";
+    });
+
+    btn.addEventListener("mouseup", () => {
+        btn.style.transform = "translateY(-2px) scale(1.03)";
+    });
+});
+
+     const firebaseConfig = {
+    apiKey: "AIzaSyCEZvvdLymeIgHxHEvGNzax-ih1psccApI",
+    authDomain: "techedify-5ad9f.firebaseapp.com",
+    projectId: "techedify-5ad9f",
+    storageBucket: "techedify-5ad9f.firebasestorage.app",
+    messagingSenderId: "377595216302",
+    appId: "1:377595216302:web:db289f9dc8332e0c17483f",
+    measurementId: "G-7HZNY09LQX"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  // =========================
+// GOOGLE SIGNUP BUTTON
+// =========================
+const googleBtn = document.createElement("button");
+
+googleBtn.innerHTML = `
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" 
+style="width:18px; height:18px; margin-right:10px;">
+Sign up with Google
+`;
+
+googleBtn.style.display = "flex";
+googleBtn.style.alignItems = "center";
+googleBtn.style.justifyContent = "center";
+googleBtn.style.gap = "5px";
+googleBtn.style.padding = "10px";
+googleBtn.style.borderRadius = "6px";
+googleBtn.style.border = "1px solid rgba(255,255,255,0.2)";
+googleBtn.style.background = "#020617";
+googleBtn.style.color = "white";
+googleBtn.style.cursor = "pointer";
+googleBtn.style.transition = "0.3s";
+
+// insert ABOVE main signup button
+const signupBtn = document.querySelector(".signupBtn");
+signupBtn.parentNode.insertBefore(googleBtn, signupBtn);
+
+
+// =========================
+// HOVER EFFECT
+// =========================
+googleBtn.addEventListener("mouseenter", () => {
+    googleBtn.style.transform = "translateY(-2px)";
+    googleBtn.style.boxShadow = "0 8px 20px rgba(255,255,255,0.2)";
+});
+
+googleBtn.addEventListener("mouseleave", () => {
+    googleBtn.style.transform = "translateY(0)";
+    googleBtn.style.boxShadow = "none";
+});
+
+
+// =========================
+// CLICK (DEMO)
+// =========================
+const provider = new firebase.auth.GoogleAuthProvider();
+
+googleBtn.addEventListener("click", () => {
+
+    firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+
+        const user = result.user;
+
+        console.log("User:", user);
+
+        alert("Welcome " + user.displayName + " 🚀");
+
+        // 👉 redirect after login
+        window.location.href = "index.html";
+
+    })
+    .catch((error) => {
+        console.error(error);
+        alert("Login Failed ❌");
+    });
+
+});
+
+
+// =========================
+// FIX OTP BUTTON SIZE
+// =========================
+const otpBtn = document.querySelector(".otpBtn");
+otpBtn.style.minWidth = "110px";
+otpBtn.style.fontSize = "12px";
+
+document.querySelector(".otp").style.flex = "1";
+otpBtn.style.flexShrink = "0";
+
+
+// =========================
+// PASSWORD TOGGLE
+// =========================
+document.querySelector(".toggle").onclick = (e) => {
+    const p = document.querySelector(".password");
+    if (p.type === "password") {
+        p.type = "text";
+        e.target.innerText = "🙈";
+    } else {
+        p.type = "password";
+        e.target.innerText = "👁️";
+    }
+};
+
+document.querySelector(".toggle2").onclick = (e) => {
+    const c = document.querySelector(".confirm");
+    if (c.type === "password") {
+        c.type = "text";
+        e.target.innerText = "🙈";
+    } else {
+        c.type = "password";
+        e.target.innerText = "👁️";
+    }
+};
+
+
+// =========================
+// OTP SYSTEM
+// =========================
+let generatedOTP = "";
+let timer;
+
+otpBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const mobile = document.querySelector(".mobile").value;
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Enter valid mobile number");
+        return;
+    }
+
+    generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+
+    document.querySelector(".showOtp").innerText =
+        "OTP (testing): " + generatedOTP;
+
+    let time = 30;
+    otpBtn.disabled = true;
+
+    otpBtn.innerText = `Wait ${time}s`;
+
+    timer = setInterval(() => {
+        time--;
+        otpBtn.innerText = `Wait ${time}s`;
+
+        if (time === 0) {
+            clearInterval(timer);
+            otpBtn.disabled = false;
+            otpBtn.innerText = "Send OTP";
+        }
+    }, 1000);
+});
+
+
+// =========================
+// SIGNUP VALIDATION
+// =========================
+document.querySelector(".signupBtn").addEventListener("click", () => {
+
+    const name = document.querySelectorAll(".input")[0].value.trim();
+    const email = document.querySelectorAll(".input")[1].value.trim();
+    const mobile = document.querySelector(".mobile").value.trim();
+    const otp = document.querySelector(".otp").value.trim();
+    const password = document.querySelector(".password").value;
+    const confirm = document.querySelector(".confirm").value;
+
+    if (!name || !email || !mobile || !otp || !password || !confirm) {
+        alert("Fill all fields");
+        return;
+    }
+
+    if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+        alert("Invalid email");
+        return;
+    }
+
+    if (otp !== generatedOTP) {
+        alert("Invalid OTP");
+        return;
+    }
+
+    if (password !== confirm) {
+        alert("Passwords do not match");
+        return;
+    }
+
+    alert("Signup Successful 🚀");
+});
+
+
+// =========================
+// FADE IN
+// =========================
+formBox.style.opacity = "0";
+formBox.style.transform = "translateY(40px)";
+formBox.style.transition = "0.8s";
+
+setTimeout(() => {
+    formBox.style.opacity = "1";
+    formBox.style.transform = "translateY(0)";
+}, 200);
+
+</script>
+</body>
+</html>

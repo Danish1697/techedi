@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techedify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <video src="logo.mp4" autoplay loop width="70px" height="50px" muted></video>
+            <div class="text">TechEdify</div>
+        </div>
+        <div class="search">
+            <div class="icon">
+                🔍︎
+            </div>
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="signup">
+            <button onclick="window.location.href='signup.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="nav">
+        <a href="index.html" class="text_1" id="home">Home</a>
+        <a href="index.html" class="text_1">Courses</a>
+        <a href="index.html" class="text_1">Blog</a>
+        <a href="index.html" class="text_1">About Us</a>
+        <a href="index.html" class="text_1" id="contact">Contact Us</a>
+    </div>
+
+    <div class="container">
+        <video src="background.mp4" loop autoplay muted width="100%" height="200px"></video>
+        <div class="black_background">
+            <h1 class="heading">Welcome to TechEdify</h1>
+        <p class="subheading">Your Gateway to Quality Education</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="cards">
+            <div class="images_1">
+                <img class="img_2" src="mohammad-rahmani-8OnkIkFBBtM-unsplash.jpg">
+            </div>
+            <div class="images_2">
+                <img class="img_3" src="hana-LMXv7FpIgoc-unsplash.jpg">
+            </div>
+        </div>
+        <div class="txt" id="txt_0">
+            <h1>Learning Without Limits.</h1>
+            <h5>Nurturing skills that transform ideas into meaningful, scalable solutions.</h5>
+        </div>
+    </main>
+
+    <main class="main_2">
+        <div class="cards_2">
+            <div class="images_3">
+                <img class="img_4" src="michael-dziedzic-qDG7XKJLKbs-unsplash.jpg">
+            </div>
+            <div class="images_4">
+                <img class="img_5" src="tai-bui-QW89whdEClA-unsplash.jpg">
+            </div>
+        </div>
+
+        <div class="txt" id="txt_1">
+            <h1>Learning that shapes future innovators.</h1>
+            <h5>With a passion for perfection, we bring your vision to life, creating events that are truly memorable.
+            </h5>
+        </div>
+        
+    </main>
+
+    <main class="html">
+        <section class="html-section">
+        <h1 id="html">HTML</h1>
+
+        <div class="console">
+            <div class="console-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file">&lt;/&gt; sample.html</span>
+            </div>
+
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+    &lt;title&gt;TechEdify&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </div>
+
+        <button class="learn-btn" onclick="copyCode()">Learn More</button>
+    </section>
+    </main>
+
+    <main class="html">
+        <section class="html-section">
+        <h1 id="html">CSS</h1>
+
+        <div class="console">
+            <div class="console-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file">&lt;/&gt; sample.css</span>
+            </div>
+
+            <pre>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+            </pre>
+        </div>
+
+        <button class="learn-btn" onclick="copyCode()">Learn More</button>
+    </section>
+    </main>
+
+    <footer>
+        <div class="conclusion">
+            <ul>
+                <a>FAQ</a>
+                <a>Privacy</a>
+                <a>Investor</a>
+                <a>Help Centre</a>
+            </ul>
+            <ul>
+                <a>Cookies</a>
+                <a> Account</a>
+                <a>Contact Us</a>
+                <a>Terms of Use</a>
+            </ul>
+            <ul>
+                <a>Jobs</a>
+                <a>About Us</a>
+                <a>Why Us?</a>
+                <a>Payment</a>
+            </ul>
+        </div>
+    </footer>
+    <div class="foot">
+        <p>© 2026, TechEdify.com, Inc. or its affiliates</p>
+    </div>
+
+
+    <script>
+
+// =========================
+// ADD COPY BUTTON IN CONSOLE BAR
+// =========================
+document.querySelectorAll(".console").forEach(consoleBox => {
+
+    const bar = consoleBox.querySelector(".console-bar");
+    const code = consoleBox.querySelector("pre").innerText;
+
+    // create button
+    const copyBtn = document.createElement("button");
+    copyBtn.innerText = "Copy";
+    
+    copyBtn.style.marginLeft = "10px";
+    copyBtn.style.padding = "4px 10px";
+    copyBtn.style.fontSize = "12px";
+    copyBtn.style.border = "none";
+    copyBtn.style.borderRadius = "5px";
+    copyBtn.style.cursor = "pointer";
+    copyBtn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+    copyBtn.style.color = "white";
+
+    // insert BEFORE file name (left side of sample.html)
+    const fileName = bar.querySelector(".file");
+    bar.insertBefore(copyBtn, fileName);
+
+    // copy logic
+    copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "Copied!";
+        copyBtn.style.background = "#22c55e";
+
+        setTimeout(() => {
+            copyBtn.innerText = "Copy";
+            copyBtn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+        }, 1500);
+    });
+
+});
+
+
+// =========================
+// 1. SMOOTH SCROLL
+// =========================
+document.documentElement.style.scrollBehavior = "smooth";
+
+
+// =========================
+// 2. SCROLL ANIMATION
+// =========================
+const elements = document.querySelectorAll("main, .txt, .cards, .cards_2, .html-section");
+
+elements.forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(60px)";
+    el.style.transition = "all 0.8s ease";
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+
+
+// =========================
+// 3. PREMIUM BUTTON EFFECTS
+// =========================
+document.querySelectorAll("button").forEach(btn => {
+
+    // base transition
+    btn.style.transition = "all 0.3s ease";
+    btn.style.position = "relative";
+    btn.style.overflow = "hidden";
+
+    // hover effect
+    btn.addEventListener("mouseenter", () => {
+        btn.style.transform = "translateY(-3px) scale(1.03)";
+        btn.style.boxShadow = "0 10px 25px rgba(0,168,255,0.4)";
+    });
+
+    btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "translateY(0) scale(1)";
+        btn.style.boxShadow = "none";
+    });
+
+    // click effect
+    btn.addEventListener("mousedown", () => {
+        btn.style.transform = "scale(0.95)";
+    });
+
+    btn.addEventListener("mouseup", () => {
+        btn.style.transform = "translateY(-3px) scale(1.03)";
+    });
+
+    // ripple effect
+    btn.addEventListener("click", function(e) {
+        const ripple = document.createElement("span");
+
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.position = "absolute";
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+        ripple.style.background = "rgba(255,255,255,0.3)";
+        ripple.style.borderRadius = "50%";
+        ripple.style.transform = "scale(0)";
+        ripple.style.animation = "ripple 0.6s linear";
+
+        btn.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+    });
+
+});
+
+
+// =========================
+// RIPPLE ANIMATION STYLE
+// =========================
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+`;
+document.head.appendChild(style);
+
+
+// =========================
+// 4. GLASS POPUP
+// =========================
+const popup = document.createElement("div");
+popup.style.cssText = `
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+opacity:0;
+pointer-events:none;
+transition:0.4s;
+z-index:999;
+`;
+
+popup.innerHTML = `
+<div id="popupBox" style="
+background: rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+color:white;
+text-align:center;
+width:400px;
+transform:scale(0.7);
+transition:0.4s;
+">
+<h2>🚀 Coming Soon</h2>
+<p>This feature will be available soon.</p>
+<button id="closePopup" style="
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:linear-gradient(90deg,#00A8FF,#18FF5B);
+color:white;
+cursor:pointer;
+">Close</button>
+</div>
+`;
+
+document.body.appendChild(popup);
+
+document.querySelectorAll(".learn-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        popup.style.opacity = "1";
+        popup.style.pointerEvents = "auto";
+        document.getElementById("popupBox").style.transform = "scale(1)";
+    });
+});
+
+popup.addEventListener("click", (e) => {
+    if (e.target.id === "closePopup" || e.target === popup) {
+        popup.style.opacity = "0";
+        popup.style.pointerEvents = "none";
+        document.getElementById("popupBox").style.transform = "scale(0.7)";
+    }
+});
+
+
+// =========================
+// 5. NAVBAR BLUR
+// =========================
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 50) {
+        nav.style.background = "rgba(0,0,0,0.6)";
+        nav.style.backdropFilter = "blur(10px)";
+    } else {
+        nav.style.background = "#010f1a";
+        nav.style.backdropFilter = "none";
+    }
+});
+// 7. TYPING EFFECT
+// =========================
+const text = "Welcome to TechEdify";
+const heading = document.querySelector(".heading");
+
+let i = 0;
+heading.innerHTML = "";
+
+function type() {
+    if (i < text.length) {
+        heading.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 80);
+    }
+}
+type();
+
+// Create progress bar
+const progress = document.createElement("div");
+
+progress.style.position = "fixed";
+progress.style.top = "0";
+progress.style.left = "0";
+progress.style.height = "3px";
+progress.style.width = "0%";
+progress.style.background = "linear-gradient(90deg, #00A8FF, #18FF5B)";
+progress.style.zIndex = "9999";
+
+document.body.appendChild(progress);
+
+// Update on scroll
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    progress.style.width = scrollPercent + "%";
+});
+
+</script>
+
+</script>
+</body>
+
+</html>
+

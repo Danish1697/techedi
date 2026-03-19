@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #01122b;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #010f1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, #00A8FF, #18FF5B) 1;
+}
+
+/* LOGO */
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+nav .logo .text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    background: linear-gradient(90deg, #00A8FF, #18FF5B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.nav {
+    height: 40px;
+    width: 100%;
+    background-color: #010f1a;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: linear-gradient(90deg, #00A8FF, #18FF5B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    width: 100%;
+}
+
+
+/* =========================
+   TABLET (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 40px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container > div {
+        width: 90% !important;
+    }
+
+}
+
+
+/* =========================
+   MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav .logo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav .logo .text {
+        font-size: 18px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container > div {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px !important;
+    }
+
+}
+
+
+/* =========================
+   SMALL DEVICES (≤ 360px)
+========================= */
+@media (max-width: 360px) {
+
+    nav .logo .text {
+        font-size: 16px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .container > div {
+        padding: 15px !important;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+}
