@@ -186,10 +186,12 @@ googleBtn.style.gap = "5px";
 googleBtn.style.padding = "10px";
 googleBtn.style.borderRadius = "6px";
 googleBtn.style.border = "1px solid rgba(255,255,255,0.2)";
-googleBtn.style.background = "#020617";
+googleBtn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+googleBtn.style.border = "none"; // optional, remove old border
 googleBtn.style.color = "white";
 googleBtn.style.cursor = "pointer";
 googleBtn.style.transition = "0.3s";
+
 
 // insert ABOVE main signup button
 const signupBtn = document.querySelector(".signupBtn");
@@ -222,11 +224,18 @@ googleBtn.addEventListener("click", () => {
 
         const user = result.user;
 
-        console.log("User:", user);
+        // STORE USER DATA
+        const userData = {
+            name: user.displayName,
+            email: user.email,
+            photo: user.photoURL
+        };
+
+        localStorage.setItem("user", JSON.stringify(userData));
 
         alert("Welcome " + user.displayName + " 🚀");
 
-        // 👉 redirect after login
+        // redirect to home
         window.location.href = "index.html";
 
     })
@@ -236,7 +245,6 @@ googleBtn.addEventListener("click", () => {
     });
 
 });
-
 
 // =========================
 // FIX OTP BUTTON SIZE
@@ -346,7 +354,21 @@ document.querySelector(".signupBtn").addEventListener("click", () => {
         return;
     }
 
-    alert("Signup Successful 🚀");
+    // =========================
+// STORE NORMAL USER
+// =========================
+const userData = {
+    name: name,
+    email: email,
+    photo: null   // no image for normal signup
+};
+
+localStorage.setItem("user", JSON.stringify(userData));
+
+alert("Signup Successful 🚀");
+
+// redirect to home
+window.location.href = "index.html";
 });
 
 

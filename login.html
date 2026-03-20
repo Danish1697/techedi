@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <video src="logo.mp4" autoplay loop width="70px" height="50px" muted></video>
+            <div class="text">TechEdify</div>
+        </div>
+        <div class="nav">
+        <a href="index.html" class="text_1" id="home">Home</a>
+        <a href="index.html" class="text_1">Courses</a>
+        <a href="index.html" class="text_1">Blog</a>
+        <a href="index.html" class="text_1">About Us</a>
+        <a href="index.html" class="text_1" id="contact">Contact Us</a>
+    </div>
+        
+    </nav>
+
+    <div class="container">
+    <div class="login-box">
+        <div style="
+width:350px;
+padding:30px;
+border-radius:15px;
+background: rgba(0,0,0,0.6);
+backdrop-filter: blur(10px);
+color:white;
+display:flex;
+flex-direction:column;
+gap:15px;
+">
+
+<h2 style="text-align:center;">Login</h2>
+
+<input type="email" placeholder="Email" class="email">
+<input type="password" placeholder="Password" class="password">
+<button class="googleBtn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+    Sign in with Google
+</button>
+<button class="loginBtn">Login</button>
+
+<p style="text-align:center;">
+<a href="signup.html" style="color:#18FF5B;">Create new account</a>
+</p>
+
+</div>
+    </div>
+</div>
+
+
+<script>
+
+// =========================
+// LOGIN LOGIC
+// =========================
+document.querySelector(".loginBtn").addEventListener("click", () => {
+
+    const email = document.querySelector(".email").value;
+    const password = document.querySelector(".password").value;
+
+    if (!email || !password) {
+        alert("Fill all fields");
+        return;
+    }
+
+    // TEMP LOGIN (frontend only)
+    const userData = {
+        name: email.split("@")[0],
+        email: email,
+        photo: null
+    };
+
+    localStorage.setItem("user", JSON.stringify(userData));
+
+    alert("Login Successful 🚀");
+
+    window.location.href = "index.html";
+});
+
+// =========================
+// FIREBASE CONFIG (same as signup)
+// =========================
+const firebaseConfig = {
+    apiKey: "AIzaSyCEZvvdLymeIgHxHEvGNzax-ih1psccApI",
+    authDomain: "techedify-5ad9f.firebaseapp.com",
+    projectId: "techedify-5ad9f",
+    storageBucket: "techedify-5ad9f.firebasestorage.app",
+    messagingSenderId: "377595216302",
+    appId: "1:377595216302:web:db289f9dc8332e0c17483f",
+    measurementId: "G-7HZNY09LQX"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
+// =========================
+// GOOGLE SIGN IN
+// =========================
+const provider = new firebase.auth.GoogleAuthProvider();
+
+document.querySelector(".googleBtn").addEventListener("click", () => {
+
+    firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+
+        const user = result.user;
+
+        // store user
+        const userData = {
+            name: user.displayName,
+            email: user.email,
+            photo: user.photoURL
+        };
+
+        localStorage.setItem("user", JSON.stringify(userData));
+
+        alert("Welcome " + user.displayName + " 🚀");
+
+        window.location.href = "index.html";
+
+    })
+    .catch((error) => {
+        console.error(error);
+        alert("Login Failed ❌");
+    });
+
+});
+
+
+</script>
+
+</body>
+</html>

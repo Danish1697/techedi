@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #01122b;
+    font-family: sans-serif;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #010f1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, #00A8FF, #18FF5B) 1;
+}
+
+/* LOGO */
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+nav .logo .text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    background: linear-gradient(90deg, #00A8FF, #18FF5B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.nav {
+    height: 40px;
+    width: 100%;
+    background-color: #010f1a;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: linear-gradient(90deg, #00A8FF, #18FF5B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.container {
+    height: calc(100vh - 60px); /* minus navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;    
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUT FIELDS */
+.login-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #020617;
+    color: white;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS GLOW */
+.login-box input:focus {
+    box-shadow: 0 0 10px rgba(0,168,255,0.6);
+}
+
+
+/* LOGIN BUTTON */
+.login-box button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg,#00A8FF,#18FF5B);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* HOVER EFFECT */
+.login-box button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,168,255,0.4);
+}
+
+/* CLICK EFFECT */
+.login-box button:active {
+    transform: scale(0.95);
+}
+
+/* GOOGLE BUTTON */
+.googleBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: #020617;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.googleBtn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* HOVER */
+.googleBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}

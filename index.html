@@ -422,6 +422,100 @@ window.addEventListener("scroll", () => {
     progress.style.width = scrollPercent + "%";
 });
 
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user) {
+
+    // hide signup button
+    const signupBtn = document.querySelector(".signup button");
+    if (signupBtn) signupBtn.style.display = "none";
+
+    // create profile
+    const profile = document.createElement("div");
+
+    // if google image exists
+    if (user.photo) {
+        profile.style.backgroundImage = `url(${user.photo})`;
+        profile.style.backgroundSize = "cover";
+    } else {
+        profile.innerText = user.name.charAt(0).toUpperCase();
+        profile.style.display = "flex";
+        profile.style.alignItems = "center";
+        profile.style.justifyContent = "center";
+        profile.style.color = "white";
+        profile.style.fontWeight = "bold";
+    }
+
+    profile.style.width = "35px";
+    profile.style.height = "35px";
+    profile.style.borderRadius = "50%";
+    profile.style.marginRight = "10px";
+    profile.style.cursor = "pointer";
+    profile.style.backgroundColor = "#00A8FF";
+
+    document.querySelector("nav").appendChild(profile);
+
+    // logout
+    
+    // =========================
+// PROFILE DROPDOWN
+// =========================
+const dropdown = document.createElement("div");
+
+dropdown.style.position = "absolute";
+dropdown.style.top = "60px";
+dropdown.style.right = "10px";
+dropdown.style.background = "#020617";
+dropdown.style.border = "1px solid rgba(255,255,255,0.2)";
+dropdown.style.borderRadius = "8px";
+dropdown.style.padding = "10px";
+dropdown.style.display = "none";
+dropdown.style.flexDirection = "column";
+dropdown.style.gap = "10px";
+dropdown.style.zIndex = "999";
+
+// signout button
+const logoutBtn = document.createElement("button");
+logoutBtn.innerText = "Sign Out";
+
+logoutBtn.style.padding = "8px";
+logoutBtn.style.border = "none";
+logoutBtn.style.borderRadius = "5px";
+logoutBtn.style.cursor = "pointer";
+logoutBtn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+logoutBtn.style.color = "white";
+
+dropdown.appendChild(logoutBtn);
+document.body.appendChild(dropdown);
+
+
+// =========================
+// TOGGLE DROPDOWN
+// =========================
+profile.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    dropdown.style.display =
+        dropdown.style.display === "flex" ? "none" : "flex";
+});
+
+
+// =========================
+// SIGN OUT
+// =========================
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("user");
+    location.reload();
+});
+
+
+// =========================
+// CLOSE WHEN CLICK OUTSIDE
+// =========================
+document.addEventListener("click", () => {
+    dropdown.style.display = "none";
+});
+}
 </script>
 
 </script>
