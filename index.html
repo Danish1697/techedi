@@ -103,7 +103,7 @@
             </pre>
         </div>
 
-        <button class="learn-btn" onclick="copyCode()">Learn More</button>
+        <button class="learn-btn" onclick="window.location.href='html.html'">Learn More</button>
     </section>
     </main>
 
@@ -303,71 +303,6 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-
-// =========================
-// 4. GLASS POPUP
-// =========================
-const popup = document.createElement("div");
-popup.style.cssText = `
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-opacity:0;
-pointer-events:none;
-transition:0.4s;
-z-index:999;
-`;
-
-popup.innerHTML = `
-<div id="popupBox" style="
-background: rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:30px;
-border-radius:20px;
-color:white;
-text-align:center;
-width:400px;
-transform:scale(0.7);
-transition:0.4s;
-">
-<h2>🚀 Coming Soon</h2>
-<p>This feature will be available soon.</p>
-<button id="closePopup" style="
-margin-top:20px;
-padding:10px 20px;
-border:none;
-border-radius:8px;
-background:linear-gradient(90deg,#00A8FF,#18FF5B);
-color:white;
-cursor:pointer;
-">Close</button>
-</div>
-`;
-
-document.body.appendChild(popup);
-
-document.querySelectorAll(".learn-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        popup.style.opacity = "1";
-        popup.style.pointerEvents = "auto";
-        document.getElementById("popupBox").style.transform = "scale(1)";
-    });
-});
-
-popup.addEventListener("click", (e) => {
-    if (e.target.id === "closePopup" || e.target === popup) {
-        popup.style.opacity = "0";
-        popup.style.pointerEvents = "none";
-        document.getElementById("popupBox").style.transform = "scale(0.7)";
-    }
-});
 
 
 // =========================

@@ -1,0 +1,2910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techedify</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">
+        <video src="logo.mp4" autoplay loop width="70px" height="50px" muted></video>
+        <div class="text">TechEdify</div>
+    </div>
+
+    <div class="search">
+        <div class="icon">🔍</div>
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <div class="signup">
+        <button onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+</nav>
+
+<!-- SUB NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Blog</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="learn-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <p class="main" onclick="toggleMenu('basicsMenu')">HTML Basics ⌄</p>
+        <div id="basicsMenu" class="subMenu">
+            <p onclick="showContent('introduction')">Introduction</p>
+            <p onclick="showContent('basics')">Basics</p>
+        </div>
+
+        <p class="main" onclick="toggleMenu('strMenu')">Structure & Elements ⌄</p>
+        <div id="strMenu" class="subMenu">
+            <p onclick="showContent('elements')">Elements</p>
+            <p onclick="showContent('attributes')">Attributes</p>
+            <p onclick="showContent('paragraphs')">Paragraph</p>
+            <p onclick="showContent('text-formatting')">Text Formatting</p>
+            <p onclick="showContent('block-&-inline-elements')">Block & Inline Elements</p>
+        </div>
+
+        <p class="main" onclick="toggleMenu('listsMenu')">Lists ⌄</p>
+        <div id="listsMenu" class="subMenu">
+            <p onclick="showContent('lists')">Lists</p>
+            <p onclick="showContent('ordered-lists')">Ordered Lists</p>
+            <p onclick="showContent('unordered-lists')">Unordered Lists</p>
+            <p onclick="showContent('description-lists')">Description Lists</p>
+        </div>
+
+        <p class="main" onclick="toggleMenu('visMenu')">Visuals & Media ⌄</p>
+        <div id="visMenu" class="subMenu">
+            <p onclick="showContent('images')">Images</p>
+            <p onclick="showContent('tables')">Color</p>
+            <p onclick="showContent('links')">Links</p>
+            <p onclick="showContent('html-video')">HTML Video</p>
+        </div>
+
+        <p class="main" onclick="toggleMenu('layMenu')">Layout ⌄</p>
+        <div id="layMenu" class="subMenu">
+            <p onclick="showContent('tables')">Tables</p>
+            <p onclick="showContent('iframes')">iFrames</p>
+            <p onclick="showContent('layout')">Layout</p>
+            <p onclick="showContent('file-paths')">File Paths</p>
+        </div>
+        </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT (FIXED POSITION) -->
+    <div class="content">
+
+        <!-- INTRO -->
+        <div id="introduction" class="tab active">
+            <h2>Introduction</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating and structuring web pages using tags and elements. <p>It defines how content like text, images, and links appear in a browser.</p><br><br>
+        <ul>
+            <li>It is a markup language, not a programming language.</li><br>
+            <li>This means it annotates text to define how it is structured and displayed by web browsers.</li><br>
+            <li>It is a static language, meaning it does not inherently provide interactive features but can be combined with CSS for styling and JavaScript for interactivity.</li><br>
+        </ul>
+
+
+</p>
+            <!-- CONSOLE -->
+    <div class="console">
+        <div class="console-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file">intro.html</span>
+            <button class="copyBtn">Copy</button>
+        </div>
+
+        <pre>
+&lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Webpage&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph of text!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+    <h3>Example Explained</h3><br>
+<ul>
+    <li><p>The&lt;!DOCTYPE html&gt; declaration defines that this document is an HTML5 document</p></li><br>
+<li>The &lt;html&gt; element is the root element of an HTML page</li><br>
+<li>The &lt;head&gt; element contains meta information about the HTML page</li><br>
+<li>The &lt;title&gt; element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li><br>
+<li>The &lt;body&gt; element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li><br>
+<li>The &lt;h1&gt; element defines a large heading</li><br>
+<li>The &lt;p&gt; element defines a paragraph</li><br>
+</p></li>
+
+    </div>
+    
+        <div id="Structure & Elements" class="tab">
+            <h2>Basics</h2>
+            <p>HTML uses tags like &lt;h1&gt;, &lt;p&gt; etc.</p>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20251106164132053975/_p_class_text_hello_world_p_.webp">
+            
+                        <!-- CONSOLE -->
+    <div class="console">
+        <div class="console-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file">intro.html</span>
+            <button class="copyBtn">Copy</button>
+        </div>
+
+        <pre>
+&lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt; title My First Webpage/title&gt
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Webpage</h1>
+    &lt;p&gt;This is my first paragraph of text!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+        </div>
+
+        <div id="color" class="tab">
+            <h2>Colors</h2>
+            <p>You can style colors using CSS.</p>
+        </div>
+
+        <div id="comments" class="tab">
+            <h2>Comments</h2>
+            <p>&lt;!-- This is a comment --&gt;</p>
+        </div>
+
+
+        <!-- BASICS -->
+        <div id="basics" class="tab">
+            <h2>HTML Basics</h2>
+
+<p>
+HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.
+It defines the layout of a webpage using elements and tags, allowing display of text, images, links, and multimedia.
+</p>
+
+<p>
+HTML is used in over 95% of websites, making it essential for modern web development.
+</p>
+
+<h3>HTML Document Structure</h3>
+
+<p>Every HTML document starts with a basic structure:</p>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">basic.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;GeeksforGeeks is an online study platform&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<h3>Basic HTML Tags</h3>
+
+<table>
+<tr><th>Tag</th><th>Description</th></tr>
+<tr><td>&lt;html&gt;</td><td>Root element of HTML page</td></tr>
+<tr><td>&lt;head&gt;</td><td>Contains metadata</td></tr>
+<tr><td>&lt;title&gt;</td><td>Page title in browser tab</td></tr>
+<tr><td>&lt;body&gt;</td><td>Visible content</td></tr>
+</table>
+
+<h3>HTML Headings</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">heading.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</pre>
+</div>
+
+<p>Headings define importance. h1 is biggest, h6 is smallest.</p>
+
+<h3>Paragraph & Break</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">paragraph.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p&gt;
+HTML stands for HyperText Markup Language.&lt;br&gt;
+It is used to design web pages.&lt;br&gt;
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Horizontal Line</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">hr.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p&gt;First Section&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Second Section&lt;/p&gt;
+</pre>
+</div>
+
+<h3>HTML Comments</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">comment.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;!-- This is a comment --&gt;
+&lt;h1&gt;Hello World&lt;/h1&gt;
+</pre>
+</div>
+
+<h3>HTML Image</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">image.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="image.png"&gt;
+</pre>
+</div>
+
+<h3>View HTML Source</h3>
+
+<ul>
+<li>Press <b>Ctrl + U</b> → view full page code</li>
+<li>Right click → Inspect → view element code</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML is the foundation of web development. By learning structure and tags, you can build complete websites.
+Practice regularly to improve your skills.
+</p>
+        </div>
+
+        <!-- ELEMENTS -->
+        <div id="elements" class="tab">
+            <h2>HTML Elements</h2>
+
+<p>
+HTML elements are the building blocks of a webpage. They define structure and content using opening tags, content, and closing tags.
+</p>
+
+<ul>
+    <li>Every element has an opening and closing tag</li>
+    <li>Elements can contain text, attributes, or other elements</li>
+    <li>Some elements are self-closing like &lt;br&gt;, &lt;img&gt;</li>
+    <li>Proper nesting is important for correct structure</li>
+</ul>
+
+<!-- BASIC EXAMPLE -->
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">element.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Elements&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Welcome to GeeksforGeeks!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<h3>Syntax of HTML Element</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;tagname&gt;Your Content&lt;/tagname&gt;
+</pre>
+</div>
+
+<ul>
+<li>Opening tag: &lt;tagname&gt;</li>
+<li>Closing tag: &lt;/tagname&gt;</li>
+<li>Content is placed between them</li>
+</ul>
+
+<h3>Case Sensitivity</h3>
+
+<p>
+HTML is not case-sensitive. But best practice is to use lowercase tags.
+</p>
+
+<h3>Nested HTML Elements</h3>
+
+<p>Elements can be placed inside other elements.</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">nested.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;GeeksforGeeks&lt;/h1&gt;
+    &lt;p&gt;Computer science portal&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<h3>Importance of Closing Tags</h3>
+
+<ul>
+<li>Browsers may auto-fix missing tags</li>
+<li>Can cause layout errors</li>
+<li>Always close tags properly</li>
+</ul>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">closing.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2&gt;Welcome&lt;/h2&gt;
+&lt;p&gt;Hello Users&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Empty HTML Elements</h3>
+
+<p>These elements do not have closing tags.</p>
+
+<ul>
+<li>&lt;br&gt;</li>
+<li>&lt;hr&gt;</li>
+<li>&lt;img&gt;</li>
+<li>&lt;input&gt;</li>
+</ul>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">empty.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p&gt;Hello&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;World&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Block vs Inline Elements</h3>
+
+<table>
+<tr><th>Type</th><th>Behavior</th></tr>
+<tr><td>Block</td><td>Takes full width, starts on new line</td></tr>
+<tr><td>Inline</td><td>Takes only needed width, stays in same line</td></tr>
+</table>
+
+<h3>Block-Level Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">block.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;div&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;p&gt;This is inside div&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<h3>Inline Elements Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">inline.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p&gt;
+This is &lt;span&gt;inline text&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;strong&gt;Bold&lt;/strong&gt;
+&lt;em&gt;Italic&lt;/em&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML elements define how content is structured on a webpage. Understanding elements is essential for building any website.
+</p>
+        </div>
+
+        <!-- ATTRIBUTES -->
+        <div id="attributes" class="tab">
+            <h2>HTML Attributes</h2>
+
+<p>
+HTML Attributes are special words used inside the opening tag of an element.
+They provide extra information about HTML elements and control their behavior,
+appearance, or functionality.
+</p>
+
+<ul>
+    <li>Each attribute has a <b>name</b> and a <b>value</b> → name="value"</li>
+    <li>Attributes tell the browser how an element should behave</li>
+</ul>
+
+<!-- CONSOLE -->
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">attribute.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;img src="image.png" style="width:300px;"&gt;
+</pre>
+</div>
+
+<h3>Syntax</h3>
+<pre>
+&lt;tagname attribute="value"&gt; Content &lt;/tagname&gt;
+</pre>
+
+<h3>Components of Attributes</h3>
+<ul>
+    <li><b>Attribute Name:</b> Defines property (e.g., src, href)</li>
+    <li><b>Attribute Value:</b> Defines value of property</li>
+</ul>
+
+<h3>Common HTML Attributes</h3>
+
+<table>
+<tr>
+    <th>Attribute</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>src</td>
+    <td>Specifies source of image, video, etc.</td>
+</tr>
+<tr>
+    <td>href</td>
+    <td>Specifies link destination</td>
+</tr>
+<tr>
+    <td>alt</td>
+    <td>Alternative text for images</td>
+</tr>
+<tr>
+    <td>id</td>
+    <td>Unique identifier for element</td>
+</tr>
+<tr>
+    <td>class</td>
+    <td>Used for styling and grouping</td>
+</tr>
+<tr>
+    <td>style</td>
+    <td>Inline CSS styling</td>
+</tr>
+<tr>
+    <td>title</td>
+    <td>Tooltip text on hover</td>
+</tr>
+<tr>
+    <td>lang</td>
+    <td>Defines language of content</td>
+</tr>
+</table>
+
+<h3>Example: Image Attribute</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">img.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;img src="image.png" alt="Sample Image" width="300"&gt;
+</pre>
+</div>
+
+<h3>Example: Link Attribute</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">link.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;a href="https://example.com" target="_blank"&gt;
+Click Here
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Important Points</h3>
+
+<ul>
+    <li>Always use <b>lowercase</b> for attributes</li>
+    <li>Always use <b>quotes</b> around values</li>
+    <li>Boolean attributes (like checked) don’t need value</li>
+    <li>Use CSS instead of old attributes like align, bgcolor</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML attributes make elements powerful and flexible. They allow you to control
+how elements behave and appear on a webpage. Mastering attributes is essential
+for building modern and interactive websites.
+</p>
+        </div>
+
+        <!-- PARAGRAPH -->
+        <div id="paragraphs" class="tab">
+           <h2>HTML Paragraphs</h2>
+
+<p>
+A paragraph in HTML is a block of text enclosed within the <b>&lt;p&gt;</b> tag.
+It helps divide content into readable sections and improves the structure of a webpage.
+</p>
+
+<ul>
+    <li>Adds space before and after text</li>
+    <li>Creates clean and readable content blocks</li>
+</ul>
+
+<!-- CONSOLE -->
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">paragraph.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;A Computer Science portal for geeks.&lt;/p&gt;
+&lt;p&gt;It contains well written articles.&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Properties of &lt;p&gt; Tag</h3>
+
+<ul>
+    <li>Multiple spaces are reduced to a single space</li>
+    <li>Extra line breaks are ignored</li>
+    <li>Each paragraph starts on a new line</li>
+    <li>Default display is <b>block</b></li>
+</ul>
+
+<!-- CONSOLE -->
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">spacing.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;
+This paragraph has multiple lines.
+But HTML shows it as a single line.
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Line Break &lt;br&gt;</h3>
+
+<p>
+The <b>&lt;br&gt;</b> tag creates a new line without starting a new paragraph.
+</p>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">break.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;
+Line 1&lt;br&gt;
+Line 2&lt;br&gt;
+Line 3
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Horizontal Line &lt;hr&gt;</h3>
+
+<p>
+The <b>&lt;hr&gt;</b> tag creates a horizontal line to separate content.
+</p>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">hr.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;First Section&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Second Section&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Alignment (Deprecated)</h3>
+
+<p>
+The <b>align</b> attribute was used to align text (left, center, right), but it is now deprecated.
+Use CSS instead.
+</p>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">align.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p align="center"&gt;Centered Text&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Best Practices</h3>
+
+<ul>
+    <li>Do not nest &lt;p&gt; tags inside each other</li>
+    <li>Use &lt;br&gt; for small line breaks</li>
+    <li>Use CSS instead of align attribute</li>
+    <li>Use &lt;pre&gt; tag if you want exact spacing</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+Paragraphs are essential for structuring text on a webpage. They improve readability
+and help organize content effectively.
+</p>
+        </div>
+
+
+
+
+        <!--Text Formatting-->
+        <div id="text-formatting" class="tab">
+            <h2>HTML Text Formatting</h2>
+
+<p>
+HTML text formatting is used to change the appearance and structure of text.
+You can make text bold, italic, highlighted, or more using different tags.
+</p>
+
+<h3>Categories of Text Formatting</h3>
+
+<ul>
+    <li><b>Logical Tags:</b> Show meaning (e.g., &lt;strong&gt;, &lt;em&gt;)</li>
+    <li><b>Physical Tags:</b> Change appearance (e.g., &lt;b&gt;, &lt;i&gt;)</li>
+</ul>
+
+<h3>Common Formatting Tags</h3>
+
+<table>
+<tr>
+    <th>Tag</th>
+    <th>Description</th>
+</tr>
+<tr><td>&lt;b&gt;</td><td>Bold text</td></tr>
+<tr><td>&lt;i&gt;</td><td>Italic text</td></tr>
+<tr><td>&lt;strong&gt;</td><td>Important bold text</td></tr>
+<tr><td>&lt;em&gt;</td><td>Emphasized text</td></tr>
+<tr><td>&lt;mark&gt;</td><td>Highlighted text</td></tr>
+<tr><td>&lt;small&gt;</td><td>Smaller text</td></tr>
+<tr><td>&lt;del&gt;</td><td>Deleted text</td></tr>
+<tr><td>&lt;ins&gt;</td><td>Inserted text</td></tr>
+<tr><td>&lt;sub&gt;</td><td>Subscript text</td></tr>
+<tr><td>&lt;sup&gt;</td><td>Superscript text</td></tr>
+</table>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">formatting.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;
+&lt;strong&gt;Important&lt;/strong&gt; text&lt;br&gt;
+&lt;em&gt;Emphasized&lt;/em&gt; text&lt;br&gt;
+&lt;b&gt;Bold&lt;/b&gt; text&lt;br&gt;
+&lt;i&gt;Italic&lt;/i&gt; text&lt;br&gt;
+&lt;mark&gt;Highlighted&lt;/mark&gt; text
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Advanced Example</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">advanced.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;
+&lt;strong&gt;&lt;em&gt;Very Important&lt;/em&gt;&lt;/strong&gt; message&lt;br&gt;
+H&lt;sub&gt;2&lt;/sub&gt;O&lt;br&gt;
+E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;br&gt;
+&lt;del&gt;Old text&lt;/del&gt; &lt;ins&gt;New text&lt;/ins&gt;&lt;br&gt;
+&lt;small&gt;Small text&lt;/small&gt;
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Best Practices</h3>
+
+<ul>
+    <li>Use <b>&lt;strong&gt;</b> instead of &lt;b&gt; for importance</li>
+    <li>Use <b>&lt;em&gt;</b> instead of &lt;i&gt; for emphasis</li>
+    <li>Combine tags for better styling</li>
+    <li>Use formatting only when needed (avoid overuse)</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+Text formatting helps improve readability and highlight important parts of content.
+Using the right tags makes your webpage more structured and user-friendly.
+</p>
+        </div>
+
+
+        <!--Block & Inline Elements-->
+        <div id="block-&-inline-elements" class="tab">
+            <h2>Block & Inline Elements</h2>
+
+<p>
+HTML elements are divided into two main types: <b>Block-level</b> and <b>Inline</b> elements.
+This difference controls how elements appear and behave on a webpage.
+</p>
+
+<h3>Key Difference</h3>
+
+<ul>
+    <li><b>Block Elements:</b> Start on a new line and take full width</li>
+    <li><b>Inline Elements:</b> Stay in the same line and take only needed space</li>
+</ul>
+
+<h3>Example</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">example.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;div&gt;This is a block element&lt;/div&gt;
+
+Text before 
+&lt;a href="#"&gt;Click Here&lt;/a&gt; 
+Text after
+</pre>
+</div>
+
+<h3>Block-Level Elements</h3>
+
+<p>
+Block elements always start on a new line and take full width of the page.
+They are mainly used for layout and structure.
+</p>
+
+<ul>
+    <li>&lt;div&gt;</li>
+    <li>&lt;p&gt;</li>
+    <li>&lt;h1&gt; to &lt;h6&gt;</li>
+    <li>&lt;section&gt;</li>
+    <li>&lt;article&gt;</li>
+    <li>&lt;nav&gt;</li>
+    <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
+    <li>&lt;table&gt;</li>
+</ul>
+
+<h3>Example: Block Element</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">block.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;div&gt;
+    &lt;h2&gt;Heading&lt;/h2&gt;
+    &lt;p&gt;This is inside a div&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<h3>Inline Elements</h3>
+
+<p>
+Inline elements do not start on a new line and only take the width required.
+They are used to style or format text inside block elements.
+</p>
+
+<ul>
+    <li>&lt;span&gt;</li>
+    <li>&lt;a&gt;</li>
+    <li>&lt;img&gt;</li>
+    <li>&lt;strong&gt;</li>
+    <li>&lt;em&gt;</li>
+    <li>&lt;input&gt;</li>
+    <li>&lt;br&gt;</li>
+</ul>
+
+<h3>Example: Inline Element</h3>
+
+<div class="console">
+    <div class="console-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file">inline.html</span>
+        <button class="copyBtn">Copy</button>
+    </div>
+
+<pre>
+&lt;p&gt;
+This is a &lt;span&gt;span element&lt;/span&gt; inside text.
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>Difference Table</h3>
+
+<table>
+<tr>
+    <th>Block Elements</th>
+    <th>Inline Elements</th>
+</tr>
+<tr>
+    <td>Start on new line</td>
+    <td>Stay in same line</td>
+</tr>
+<tr>
+    <td>Take full width</td>
+    <td>Take only needed width</td>
+</tr>
+<tr>
+    <td>Used for layout</td>
+    <td>Used for styling text</td>
+</tr>
+</table>
+
+<h3>Conclusion</h3>
+
+<p>
+Understanding block and inline elements helps you design better layouts and structure
+your webpage properly. Most HTML designs are built using these two types.
+</p>
+        </div>
+    
+
+
+
+
+
+
+
+
+        <!-- LISTS -->
+        <div id="lists" class="tab">
+            <h2>
+        Lists
+    </h2>
+    <p>An HTML list organizes content into ordered or unordered formats, making information clear and easy to read.</p><br>
+    <ul>
+        <li>HTML lists organize content using tags like &lt;ul&gt;, &lt;ol&gt; & &lt;li&gt;.</li>
+        <li>They improve readability by presenting data in a structured format</li>
+        
+    </ul>
+
+    <p>
+
+
+
+
+</p>
+
+<div class="console">
+        <div class="console-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file">intro.html</span>
+            <button class="copyBtn">Copy</button>
+        </div>
+
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Welcome To GeeksforGeeks Learning&lt;/h2&gt;
+    &lt;h5&gt;List of available courses&lt;/h5&gt;
+    
+    &lt;ul&gt;
+        &lt;li&gt;Data Structures &amp; Algorithm&lt;/li&gt;
+        &lt;li&gt;Web Technology&lt;/li&gt;
+        &lt;li&gt;Aptitude &amp; Logical Reasoning&lt;/li&gt;
+        &lt;li&gt;Programming Languages&lt;/li&gt;
+    &lt;/ul&gt;
+  
+    &lt;h5&gt;Data Structures topics&lt;/h5&gt;
+    
+    &lt;ol&gt;
+        &lt;li&gt;Array&lt;/li&gt;
+        &lt;li&gt;Linked List&lt;/li&gt;
+        &lt;li&gt;Stacks&lt;/li&gt;
+        &lt;li&gt;Queues&lt;/li&gt;
+        &lt;li&gt;Trees&lt;/li&gt;
+        &lt;li&gt;Graphs&lt;/li&gt;
+    &lt;/ol&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+    <p> Output</p>
+    <br>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20260114115857919235/image.webp">
+    <br><br>
+    <h2>HTML List Tags</h2>
+    
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Defines an unordered list.</td>
+        </tr>
+        <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Defines an ordered list.</td>
+        </tr>
+        <tr>
+            <td>&lt;li&gt;</td>
+            <td>Defines a list item.</td>
+        </tr>
+        <tr>
+            <td>&lt;dl&gt;</td>
+            <td>Defines a description list.</td>
+        </tr>
+        <tr>
+            <td>&lt;dt&gt;</td>
+            <td>Defines a term in a description list.</td>
+        </tr>
+        <tr>
+            <td>&lt;dd&gt;</td>
+            <td>Details the term in a description list.</td>
+        </tr>
+    </table>
+
+    </div>
+    
+        
+    <!--Ordered Lists-->
+        <div id="ordered-lists" class="tab">
+            <h2>HTML Ordered Lists</h2>
+
+<p>
+An HTML Ordered List is created using the <b>&lt;ol&gt;</b> tag to display items in a specific sequence.
+Each item is defined using the <b>&lt;li&gt;</b> tag.
+</p>
+
+<ul>
+    <li>Used for step-by-step instructions</li>
+    <li>Items are automatically numbered</li>
+    <li>Numbering style can be changed</li>
+</ul>
+
+<h3>Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+    &lt;li&gt;Bread&lt;/li&gt;
+    &lt;li&gt;Butter&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2&gt;My To-Do List&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Go shopping&lt;/li&gt;
+    &lt;li&gt;Pay bills&lt;/li&gt;
+    &lt;li&gt;Prepare dinner&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Type Attribute</h3>
+
+<table>
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td>1</td><td>Numbers (default)</td></tr>
+<tr><td>A</td><td>Uppercase letters</td></tr>
+<tr><td>a</td><td>Lowercase letters</td></tr>
+<tr><td>I</td><td>Uppercase Roman</td></tr>
+<tr><td>i</td><td>Lowercase Roman</td></tr>
+</table>
+
+<h3>Examples</h3>
+
+<p><b>Uppercase Letters</b></p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">uppercase.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol type="A"&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Cherry&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<p><b>Lowercase Letters</b></p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">lowercase.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol type="a"&gt;
+    &lt;li&gt;RCB&lt;/li&gt;
+    &lt;li&gt;CSK&lt;/li&gt;
+    &lt;li&gt;MI&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<p><b>Roman Numbers</b></p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">roman.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol type="I"&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+    &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Reverse Ordered List</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">reverse.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol reversed&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Start Attribute</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">start.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol start="5"&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+    &lt;li&gt;Item 6&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Nested Ordered List</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">nested.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ol&gt;
+    &lt;li&gt;JavaScript
+        &lt;ol&gt;
+            &lt;li&gt;React&lt;/li&gt;
+            &lt;li&gt;Angular&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Python
+        &lt;ol&gt;
+            &lt;li&gt;Django&lt;/li&gt;
+            &lt;li&gt;Flask&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+Ordered lists help display structured and step-by-step information clearly.
+They are essential for instructions, rankings, and organized content.
+</p>
+        </div>
+    
+    <!--Unordered Lists-->
+        <div id="unordered-lists" class="tab">
+            <h2>HTML Unordered Lists</h2>
+
+<p>
+An unordered list in HTML is used to group items that do not need a specific order.
+Items are displayed using bullet points by default.
+</p>
+
+<ul>
+    <li>No specific sequence required</li>
+    <li>Uses bullet points</li>
+    <li>Can be nested</li>
+    <li>Easy to create using &lt;ul&gt; and &lt;li&gt;</li>
+</ul>
+
+<h3>Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2&gt;Unordered List&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;li&gt;React&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>List Style Types</h3>
+
+<table>
+<tr><th>Style</th><th>Description</th></tr>
+<tr><td>disc</td><td>Default filled circle</td></tr>
+<tr><td>circle</td><td>Hollow circle</td></tr>
+<tr><td>square</td><td>Square bullets</td></tr>
+<tr><td>none</td><td>No bullets</td></tr>
+</table>
+
+<h3>Square Bullet Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">square.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ul style="list-style-type:square;"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Circle Bullet Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">circle.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ul style="list-style-type:circle;"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Remove Bullets</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">none.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ul style="list-style-type:none;"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Nested Unordered List</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">nested.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;ul&gt;
+    &lt;li&gt;Web Development
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Horizontal List (Navigation)</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">horizontal.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;style&gt;
+ul {
+    list-style-type:none;
+    padding:0;
+}
+li {
+    display:inline;
+    margin-right:15px;
+}
+&lt;/style&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+Unordered lists are used to display items without sequence.
+They are useful for grouping content, creating menus, and organizing information clearly.
+</p>
+        </div>
+    
+    <!--Description Lists-->
+        <div id="description-lists" class="tab">
+            <h2>HTML Description Lists</h2>
+
+<p>
+An HTML Description List is used to display terms and their descriptions.
+It uses three tags: &lt;dl&gt;, &lt;dt&gt;, and &lt;dd&gt;.
+</p>
+
+<ul>
+    <li>&lt;dl&gt; → Defines the description list</li>
+    <li>&lt;dt&gt; → Defines the term (name)</li>
+    <li>&lt;dd&gt; → Defines the description</li>
+</ul>
+
+<h3>Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;dl&gt;
+    &lt;dt&gt;Coffee&lt;/dt&gt;
+    &lt;dd&gt;A hot drink made from coffee beans&lt;/dd&gt;
+
+    &lt;dt&gt;Espresso&lt;/dt&gt;
+    &lt;dd&gt;Strong coffee made by forcing steam&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2&gt;Description List&lt;/h2&gt;
+
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Programming language for web&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+</div>
+
+<h3>Nested Description List</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">nested.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;dl&gt;
+    &lt;dt&gt;Hardware&lt;/dt&gt;
+    &lt;dd&gt;Physical components&lt;/dd&gt;
+
+    &lt;dd&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;CPU&lt;/dt&gt;
+            &lt;dd&gt;Processor&lt;/dd&gt;
+
+            &lt;dt&gt;GPU&lt;/dt&gt;
+            &lt;dd&gt;Graphics unit&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/dd&gt;
+
+    &lt;dt&gt;Software&lt;/dt&gt;
+    &lt;dd&gt;Programs and applications&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+</div>
+
+<h3>Use Cases</h3>
+
+<ul>
+    <li>FAQs (Question & Answer)</li>
+    <li>Glossaries (Terms & Definitions)</li>
+    <li>Product descriptions</li>
+    <li>Technical documentation</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+Description lists help organize terms and their meanings in a clean and structured way.
+They are useful when content requires explanation rather than simple listing.
+</p>
+        </div>
+    
+    <!--images-->
+        <div id="images" class="tab">
+            <h2>HTML Images</h2>
+
+<p>
+HTML images are used to display pictures on a webpage.
+The &lt;img&gt; tag is used to embed images in HTML.
+</p>
+
+<ul>
+    <li>&lt;img&gt; → Used to display images</li>
+    <li>src → Specifies image path</li>
+    <li>alt → Alternative text</li>
+    <li>width & height → Control image size</li>
+</ul>
+
+<h3>Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="image.jpg" alt="description"&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2&gt;Image Example&lt;/h2&gt;
+
+&lt;img src="image.jpg" alt="Sample Image"&gt;
+</pre>
+</div>
+
+<h3>Image with Size</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">size.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="image.jpg" width="300" height="200"&gt;
+</pre>
+</div>
+
+<h3>Image with Link</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">link.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;a href="https://example.com"&gt;
+    &lt;img src="image.jpg" alt="Clickable Image"&gt;
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Image from Internet</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">online.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="https://example.com/image.jpg" alt="Online Image"&gt;
+</pre>
+</div>
+
+<h3>Best Practices</h3>
+
+<ul>
+    <li>Always use <b>alt</b> attribute for accessibility</li>
+    <li>Optimize image size for faster loading</li>
+    <li>Use correct file formats (jpg, png, webp)</li>
+    <li>Avoid very large images</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+Images make webpages more attractive and informative.
+Using proper attributes ensures better performance and accessibility.
+</p>
+        </div>
+    
+    <!--colors-->
+        <div id="colors" class="tab">
+            <h2>HTML Colors</h2>
+
+<p>
+HTML colors are used to style elements like text, backgrounds, borders, and links.
+You can apply colors using different formats such as color names, HEX, RGB, RGBA, and HSL.
+</p>
+
+<h3>Common Color Names</h3>
+
+<ul>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+    <li>Pink</li>
+    <li>Purple</li>
+    <li>Sky Blue</li>
+    <li>Gray</li>
+    <li>Orange</li>
+</ul>
+
+<h3>Color Usage in HTML</h3>
+
+<ul>
+    <li>Background Color → Used behind content</li>
+    <li>Text Color → Changes text color</li>
+    <li>Border Color → Styles element borders</li>
+    <li>Link Color → Styles hyperlinks</li>
+</ul>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">colors.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h2 style="background-color: gray;"&gt;
+    Heading with Gray Background
+&lt;/h2&gt;
+
+&lt;div style="border: 2px solid skyblue;"&gt;
+    Div with Skyblue Border
+&lt;/div&gt;
+
+&lt;a href="#" style="color: tomato;"&gt;
+    Colored Link
+&lt;/a&gt;
+
+&lt;p style="color: darkgreen;"&gt;
+    Paragraph with Dark Green Text
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>RGB Color</h3>
+
+<p>
+RGB stands for Red, Green, Blue. Each value ranges from 0 to 255.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">rgb.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p style="background-color: rgb(0, 0, 255);"&gt;
+    Blue Background using RGB
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>RGBA Color (With Transparency)</h3>
+
+<p>
+RGBA adds transparency using alpha value (0 to 1).
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">rgba.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p style="color: rgba(128, 0, 128, 0.5);"&gt;
+    Semi-transparent Purple Text
+&lt;/p&gt;
+</pre>
+</div>
+
+<h3>HEX Color</h3>
+
+<p>
+HEX colors use a 6-digit code (#rrggbb).
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">hex.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;div style="background-color: #FF69B4;"&gt;
+    Pink Background using HEX
+&lt;/div&gt;
+</pre>
+</div>
+
+<h3>HSL Color</h3>
+
+<p>
+HSL stands for Hue, Saturation, and Lightness.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">hsl.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;div style="background-color: hsl(45, 100%, 50%);"&gt;
+    Golden Background using HSL
+&lt;/div&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML colors help make websites visually appealing and readable. 
+You can use different color formats depending on your design needs.
+</p>
+        </div>
+    
+    <!--links-->
+        <div id="links" class="tab">
+            <h2>HTML Links (Hyperlinks)</h2>
+
+<p>
+HTML links, also known as hyperlinks, are used to connect one web page to another.
+They allow users to navigate between pages, websites, or sections easily.
+</p>
+
+<ul>
+    <li>&lt;a&gt; → Anchor tag used to create links</li>
+    <li>href → Specifies the destination URL</li>
+    <li>target → Defines where to open the link</li>
+    <li>title → Adds extra information on hover</li>
+</ul>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">links.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;p&gt;Click on the link below:&lt;/p&gt;
+
+&lt;a href="https://www.example.com"&gt;
+    Visit Website
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Default Link Behavior</h3>
+
+<ul>
+    <li>Unvisited link → Blue & underlined</li>
+    <li>Visited link → Purple & underlined</li>
+    <li>Active link → Red & underlined</li>
+</ul>
+
+<h3>Target Attribute</h3>
+
+<p>
+The target attribute specifies where the link will open.
+</p>
+
+<ul>
+    <li>_blank → Opens in new tab</li>
+    <li>_self → Opens in same tab (default)</li>
+    <li>_parent → Opens in parent frame</li>
+    <li>_top → Opens in full window</li>
+</ul>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">target.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;
+    Open in New Tab
+&lt;/a&gt;
+
+&lt;a href="https://www.example.com" target="_self"&gt;
+    Open in Same Tab
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Linking Different Elements</h3>
+
+<ul>
+    <li>Image Link</li>
+    <li>Email Link</li>
+    <li>Phone Link</li>
+    <li>Button Link</li>
+    <li>Download Link</li>
+</ul>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">elements.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;!-- Image Link --&gt;
+&lt;a href="image.jpg"&gt;
+    &lt;img src="image.jpg" alt="Image"&gt;
+&lt;/a&gt;
+
+&lt;!-- Email Link --&gt;
+&lt;a href="mailto:someone@example.com"&gt;
+    Send Email
+&lt;/a&gt;
+
+&lt;!-- Phone Link --&gt;
+&lt;a href="tel:+1234567890"&gt;
+    Call Now
+&lt;/a&gt;
+
+&lt;!-- Button Link --&gt;
+&lt;a href="https://www.example.com"&gt;
+    &lt;button&gt;Visit Site&lt;/button&gt;
+&lt;/a&gt;
+
+&lt;!-- Download Link --&gt;
+&lt;a href="file.pdf" download&gt;
+    Download File
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML links are essential for navigation on websites. 
+They can connect pages, files, emails, and even phone numbers, making web browsing interactive and user-friendly.
+</p>
+        </div>
+
+    <!--html-video-->
+        <div id="html-video" class="tab">
+            <h2>HTML Video</h2>
+
+<p>
+The HTML &lt;video&gt; tag is used to embed video content in a web page.
+It allows users to play videos directly in the browser without needing external plugins.
+</p>
+
+<ul>
+    <li>&lt;video&gt; → Defines the video player</li>
+    <li>&lt;source&gt; → Specifies video file</li>
+    <li>controls → Adds play, pause, volume buttons</li>
+    <li>autoplay → Plays video automatically</li>
+    <li>loop → Repeats the video</li>
+    <li>muted → Mutes the video</li>
+</ul>
+
+<h3>Basic Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">video.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;video controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic-video.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h3&gt;Sample Video&lt;/h3&gt;
+
+&lt;video width="400" controls&gt;
+    &lt;source src="sample.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</pre>
+</div>
+
+<h3>Video Attributes</h3>
+
+<ul>
+    <li>controls → Shows video controls</li>
+    <li>autoplay → Plays automatically</li>
+    <li>loop → Repeats video</li>
+    <li>muted → Mutes audio</li>
+    <li>width / height → Sets video size</li>
+</ul>
+
+<h3>Example with Attributes</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">attributes.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;video width="400" controls autoplay muted loop&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</pre>
+</div>
+
+<h3>Multiple Video Sources</h3>
+
+<p>
+You can add multiple video formats to support different browsers.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">multiple.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+The HTML video tag makes it easy to add videos to web pages.
+With attributes like controls, autoplay, and loop, you can fully control video behavior and improve user experience.
+</p>
+        </div>
+
+    <!--tables-->
+        <div id="tables" class="tab">
+            <h2>HTML Tables</h2>
+
+<p>
+HTML tables are used to display data in rows and columns.
+They are useful for showing structured information like schedules, marksheets, and reports.
+</p>
+
+<ul>
+    <li>&lt;table&gt; → Defines the table</li>
+    <li>&lt;tr&gt; → Defines a table row</li>
+    <li>&lt;th&gt; → Defines a table header</li>
+    <li>&lt;td&gt; → Defines table data (cell)</li>
+</ul>
+
+<h3>Basic Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">table.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic-table.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h3&gt;Student Table&lt;/h3&gt;
+
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Course&lt;/th&gt;
+        &lt;th&gt;Marks&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Aman&lt;/td&gt;
+        &lt;td&gt;B.Tech&lt;/td&gt;
+        &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Riya&lt;/td&gt;
+        &lt;td&gt;BCA&lt;/td&gt;
+        &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h3>Table Attributes</h3>
+
+<ul>
+    <li>border → Adds border to table</li>
+    <li>cellpadding → Space inside cells</li>
+    <li>cellspacing → Space between cells</li>
+    <li>width → Sets table width</li>
+</ul>
+
+<h3>Example with Attributes</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">attributes.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;table border="1" cellpadding="10" cellspacing="5" width="50%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Product&lt;/th&gt;
+        &lt;th&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Laptop&lt;/td&gt;
+        &lt;td&gt;50000&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h3>Rowspan and Colspan</h3>
+
+<p>
+Rowspan and colspan are used to merge cells in a table.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">merge.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th colspan="2"&gt;Marks&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Aman&lt;/td&gt;
+        &lt;td&gt;Math&lt;/td&gt;
+        &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Science&lt;/td&gt;
+        &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h3>Conclusion</h3>
+   
+<p>
+HTML tables are used to organize and display data clearly.
+With features like borders, spacing, and merging cells, tables become powerful for structured content.
+</p>
+        </div>
+        
+    <!--iframe-->
+        <div id="iframe" class="tab">
+            <h2>HTML Iframes</h2>
+
+<p>
+An iframe (Inline Frame) is used to embed another webpage inside your current webpage.
+It acts like a window that displays external content such as websites, videos, or maps.
+</p>
+
+<ul>
+    <li>&lt;iframe&gt; → Embeds another webpage</li>
+    <li>src → URL of the page to display</li>
+    <li>width / height → Sets iframe size</li>
+    <li>name → Used to target iframe with links</li>
+</ul>
+
+<h3>Basic Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">iframe.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;iframe src="https://www.example.com"&gt;&lt;/iframe&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;h3&gt;Embedded Website&lt;/h3&gt;
+
+&lt;iframe src="https://www.example.com"
+        width="400"
+        height="300"&gt;
+&lt;/iframe&gt;
+</pre>
+</div>
+
+<h3>Iframe Attributes</h3>
+
+<ul>
+    <li>src → Specifies URL</li>
+    <li>width → Width of iframe</li>
+    <li>height → Height of iframe</li>
+    <li>allowfullscreen → Enables fullscreen mode</li>
+    <li>loading → Lazy loading of iframe</li>
+</ul>
+
+<h3>Remove Border</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">noborder.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;iframe src="https://www.example.com"
+        width="400"
+        height="300"
+        style="border: none;"&gt;
+&lt;/iframe&gt;
+</pre>
+</div>
+
+<h3>Styled Border</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">style.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;iframe src="https://www.example.com"
+        width="400"
+        height="300"
+        style="border: 3px solid orange;"&gt;
+&lt;/iframe&gt;
+</pre>
+</div>
+
+<h3>Target Iframe with Link</h3>
+
+<p>
+You can load different pages inside an iframe using links.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">target.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;iframe src="page1.html"
+        width="400"
+        height="300"
+        name="myFrame"&gt;
+&lt;/iframe&gt;
+
+&lt;br&gt;
+
+&lt;a href="page2.html" target="myFrame"&gt;
+    Load Page 2
+&lt;/a&gt;
+</pre>
+</div>
+
+<h3>Use Cases</h3>
+
+<ul>
+    <li>Embedding YouTube videos</li>
+    <li>Adding Google Maps</li>
+    <li>Loading external websites</li>
+    <li>Displaying forms or widgets</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML iframes allow embedding external content inside a webpage.
+They are useful for videos, maps, and third-party content, but should be used carefully for performance and security.
+</p>
+        </div>
+
+    <!--layout-->
+        <div id="layout" class="tab">
+            <h2>HTML Layout</h2>
+
+<p>
+HTML layout is used to structure a webpage into different sections.
+It helps organize content, improve readability, and create better user experience.
+</p>
+
+<ul>
+    <li>&lt;header&gt; → Top section (title/logo)</li>
+    <li>&lt;nav&gt; → Navigation links</li>
+    <li>&lt;main&gt; → Main content area</li>
+    <li>&lt;section&gt; → Groups related content</li>
+    <li>&lt;article&gt; → Independent content</li>
+    <li>&lt;aside&gt; → Sidebar content</li>
+    <li>&lt;footer&gt; → Bottom section</li>
+</ul>
+
+<h3>Basic Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">layout.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;header&gt;Content&lt;/header&gt;
+&lt;nav&gt;Content&lt;/nav&gt;
+&lt;main&gt;Content&lt;/main&gt;
+&lt;footer&gt;Content&lt;/footer&gt;
+</pre>
+</div>
+
+<h3>Basic Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">basic-layout.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;p&gt;Welcome to my website!&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 My Website&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+</div>
+
+<h3>Layout Components</h3>
+
+<ul>
+    <li>Header → Website title or logo</li>
+    <li>Navigation → Menu links</li>
+    <li>Main → Primary content</li>
+    <li>Sidebar (aside) → Extra information</li>
+    <li>Footer → Contact or copyright info</li>
+</ul>
+
+<h3>Advanced Layout Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">advanced.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;header&gt;
+    &lt;h1&gt;My Blog&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt; |
+    &lt;a href="#"&gt;About&lt;/a&gt; |
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Latest Posts&lt;/h2&gt;
+
+    &lt;article&gt;
+        &lt;h3&gt;Post Title&lt;/h3&gt;
+        &lt;p&gt;This is a blog post.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+
+&lt;aside&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;Short bio&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 My Blog&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+</div>
+
+<h3>Styled Layout Example</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">styled.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;style&gt;
+header {
+    background: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background: black;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+&lt;/style&gt;
+
+&lt;header&gt;
+    &lt;h1&gt;Styled Page&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;Services&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+    &lt;h2&gt;Welcome&lt;/h2&gt;
+    &lt;p&gt;This is a simple layout.&lt;/p&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 Styled Page&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+</div>
+
+<h3>Best Practices</h3>
+
+<ul>
+    <li>Use semantic tags for better structure</li>
+    <li>Keep layout simple and clean</li>
+    <li>Use CSS (Flexbox/Grid) for responsive design</li>
+    <li>Make layout mobile-friendly</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+HTML layout helps organize web pages into meaningful sections.
+Using semantic elements improves readability, accessibility, and SEO.
+</p>
+        </div>
+
+    <!--file paths-->
+        <div id="file-paths" class="tab">
+            <h2>HTML File Paths</h2>
+
+<p>
+HTML File Paths tell the browser where to find resources like images, videos, scripts, and other files.
+They ensure that all required files load correctly on a webpage.
+</p>
+
+<ul>
+    <li>File paths locate external resources</li>
+    <li>Used in attributes like <code>src</code> and <code>href</code></li>
+    <li>Helps load images, videos, CSS, and JS files</li>
+</ul>
+
+<h3>Basic Syntax</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">syntax.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="path/image.jpg" alt="description"&gt;
+</pre>
+</div>
+
+<h3>Absolute File Path</h3>
+
+<p>
+An absolute path uses the full URL including domain name.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">absolute.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="https://example.com/image.jpg" alt="Image"&gt;
+</pre>
+</div>
+
+<ul>
+    <li>Uses full URL (http/https)</li>
+    <li>Best for external resources</li>
+    <li>Works from anywhere</li>
+</ul>
+
+<h3>Relative File Path</h3>
+
+<p>
+A relative path depends on the current file location.
+</p>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">relative.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="images/photo.jpg" alt="Image"&gt;
+</pre>
+</div>
+
+<ul>
+    <li>Used for internal files</li>
+    <li>Makes website portable</li>
+</ul>
+
+<h3>Directory Navigation</h3>
+
+<div class="console">
+<div class="console-bar">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+<span class="file">paths.html</span>
+<button class="copyBtn">Copy</button>
+</div>
+
+<pre>
+&lt;img src="./image.jpg"&gt;   <!-- current folder -->
+&lt;img src="../image.jpg"&gt;  <!-- one folder up -->
+&lt;img src="/images/img.jpg"&gt; <!-- root folder -->
+</pre>
+</div>
+
+<ul>
+    <li><code>./</code> → Current directory</li>
+    <li><code>../</code> → One level up</li>
+    <li><code>/</code> → Root directory</li>
+</ul>
+
+<h3>Best Practices</h3>
+
+<ul>
+    <li>Use relative paths for internal files</li>
+    <li>Keep folder structure clean</li>
+    <li>Avoid spaces in file names</li>
+    <li>Always test paths properly</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>
+File paths are essential for linking resources in HTML.
+Using correct paths ensures your website loads all assets properly and works smoothly.
+</p>
+        </div>
+
+</div>
+
+<script>
+
+// =========================
+// SIDEBAR TOGGLE
+// =========================
+function toggleMenu(id) {
+    document.querySelectorAll(".subMenu").forEach(menu => {
+        if (menu.id !== id) menu.style.display = "none";
+    });
+
+    const menu = document.getElementById(id);
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// =========================
+// KEEP ACTIVE TAB (IMPORTANT FIX)
+// =========================
+
+// Load saved tab on refresh
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTab = localStorage.getItem("activeTab");
+
+    if (savedTab) {
+        showContent(savedTab);
+    } else {
+        document.querySelector(".tab.active").style.display = "flex";
+    }
+});
+
+// =========================
+// SHOW CONTENT FUNCTION
+// =========================
+function showContent(id) {
+
+    // hide all tabs
+    document.querySelectorAll(".tab").forEach(tab => {
+        tab.style.display = "none";
+        tab.classList.remove("active");
+    });
+
+    // remove active sidebar highlight
+    document.querySelectorAll(".sidebar p").forEach(p => {
+        p.classList.remove("active");
+    });
+
+    // show selected tab
+    const activeTab = document.getElementById(id);
+
+    if (activeTab) {
+        activeTab.style.display = "flex";
+        activeTab.classList.add("active");
+
+        // save state (VERY IMPORTANT)
+        localStorage.setItem("activeTab", id);
+
+        // animation
+        activeTab.style.opacity = "0";
+        activeTab.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+            activeTab.style.opacity = "1";
+            activeTab.style.transform = "translateY(0)";
+        }, 50);
+    }
+
+    // highlight clicked sidebar item
+    event.target.classList.add("active");
+}
+
+// =========================
+// COPY BUTTON
+// =========================
+document.querySelectorAll(".copyBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const code = btn.parentElement.nextElementSibling.innerText;
+        navigator.clipboard.writeText(code);
+
+        btn.innerText = "Copied!";
+        btn.style.background = "#22c55e";
+
+        setTimeout(() => {
+            btn.innerText = "Copy";
+            btn.style.background = "linear-gradient(90deg,#00A8FF,#18FF5B)";
+        }, 1500);
+    });
+});
+
+</script>
+
+</body>
+</html>

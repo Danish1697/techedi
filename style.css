@@ -282,6 +282,7 @@ main {
     flex-direction: column;
     align-items: stretch;
     transition: 0.3s ease;
+    box-shadow:0 0 30px rgba(0,168,255,0.2);
 
 }
 
@@ -339,23 +340,7 @@ main {
     border-radius: 10px;
 }
 
-/* HOVER EFFECT */
-.console:hover {
-    transform: translateY(-5px);
 
-    /* LEFT (low)   RIGHT (low)   BOTTOM (high) */
-    box-shadow:
-        -5px 0 7px rgba(0, 168, 255, 0.2),   /* left soft */
-         5px 0 7px rgba(24, 255, 91, 0.2),   /* right soft */
-         0 10px 15px rgba(0, 168, 255, 0.6),  /* bottom strong */
-         0 15px 30px rgba(24, 255, 91, 0.5);  /* bottom glow spread */
-}
-
-
-
-.console:hover .console-bar {
-    background: #1e293b;
-}
 .learn-btn {
     margin-top: 30px;
     padding: 10px 20px;
